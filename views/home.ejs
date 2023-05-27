@@ -1,0 +1,49 @@
+<div class="home-container">
+        <!-- File Upload Form -->
+    <div class="file-container">
+        <form action="/file/upload" enctype="multipart/form-data" method="post"> 
+            
+        <!-- File Drop Area -->
+            <div class="file-drop-area">
+                <span class="fake-btn">Choose files</span>
+                <span class="file-msg">or drag and drop files here</span>
+                <input class="file-input" type="file" name="file" id="formFileSm"  placeholder="Upload your CSV file">
+
+              </div>
+               <!-- Submit Button -->
+              <div class="submit-btn ">
+                <input id="file-submit" type="submit" value="Upload"> 
+
+              </div>
+
+        
+        </form>
+    </div>
+        <!-- File List Container -->
+
+    <div class="file-list-container">
+        <%if(files.length>0){%>
+            <% for(file of files){ %>
+                            <!-- File List Item -->
+
+            <div class="file-list">
+                <div class="file-name-container">
+                    <a href="/show/filecsv/?file_id=<%= file._id %>&page=1">
+                        <%=file.originalName%>
+                    </a>
+                                
+                </div>
+                            <!-- delete button -->
+
+                <div class="delete-btn">
+                    <a href="/delete/deleteFile/<%= file.file %>">
+                        <button class="btn btn-danger" style="font-size: 0.8rem;">Delete</button>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+
+<script src="/js/home.js"></script>

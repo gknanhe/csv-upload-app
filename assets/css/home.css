@@ -1,0 +1,151 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+
+}
+.file-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+.file-drop-area {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    max-width: 100%;
+    padding: 25px;
+    border: 1px dashed #3d444c;
+    border-radius: 3px;
+    transition: 0.2s;
+    
+  }
+  
+  .file-drop-area.is-active {
+    background-color: rgba(43, 38, 181, 0.05);
+    border-color: #5224ff;
+
+  }
+
+  .fake-btn {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  
+
+  .file-msg {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    
+  }
+
+
+  .file-input:focus {
+    outline: none;
+  }
+
+.submit-btn{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit-btn{
+    display: none;
+}
+  #file-submit{
+    padding: 15px 35px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid  rgba(91, 58, 255, 0.8);
+    color: white;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.active-btn{
+    display: flex;
+}
+
+
+/* file list  */
+
+.file-list-container{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+.file-list{
+    width: 100%;
+    border: 1px solid #30363d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.file-name-container{
+    margin: 10px;
+    overflow: hidden;
+   
+
+}
+
+.file-name-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.delete-btn{
+  margin: 0 30px;
+}
+
+.delete-btn button{
+  padding: 5px 12px;
+  background: transparent;
+  color: white;
+  outline: none;
+  border: 1px solid #5224ff;
+  border-radius: 15px;
+}

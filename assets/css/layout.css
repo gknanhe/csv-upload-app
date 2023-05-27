@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #243461; */
+     background-color: #0d1118;
+    color: white;
+}
+  
+  body #layout-main {
+    min-height: 100%;
+    height: auto;
+    margin: 0;
+  }
+  

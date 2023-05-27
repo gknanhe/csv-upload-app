@@ -1,0 +1,34 @@
+#html{
+    background-color: #111727;
+}
+#layout-header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    background: #EEF3FF;
+    color: rgb(214, 189, 255);
+    box-shadow: 1px 1px 1px 1px rgb(221, 229, 255);
+  }
+  
+  #layout-header nav .mini-logo p {
+    margin: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  #layout-header nav .auth-links ul {
+    margin: 5% 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0;
+  }
+  
+  #layout-header nav .auth-links ul li {
+    margin-right: 30px;
+  }
+  
+  #layout-header nav a {
+    color: #3069fe;
+    text-decoration: none;
+  }
+  

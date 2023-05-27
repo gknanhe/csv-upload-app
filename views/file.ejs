@@ -1,0 +1,109 @@
+<div id="filePage">
+    <!-- heading  -->
+    <div class="heading">
+        <a href="/" style="text-decoration: none;">
+            <h1 class="headingText">CSV Upload</h1>
+        </a>
+    </div>
+
+    <!-- serarch box  -->
+    <div id="search-box">
+        <div class="div">
+            <span>Search Using</span>
+        <select class="select" name="option" id="opt">
+            <% for(let i=0; i<head.length; i++){ %>
+                <option value="<%= i %>">
+                    <%= head[i] %>
+                </option>
+                <% } %>
+        </select>
+        </div>
+        <input type="text" name="search" id="search" onkeyup='searchTable()' placeholder="search..."></input>
+
+
+    </div>
+
+
+
+
+
+    
+    <div class="container">
+
+        <!-- data table  -->
+        <table id="sortTable">
+            <thead>
+                <tr>
+
+                    <%for(let i=0; i<head.length; i++){%>
+                        <th>
+                            <div class="headRowHeading">
+                                <%= head[i]%>
+                                    <i class="fa-solid " ></i>
+                            </div>
+                        </th>
+
+                        <%}%>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% for(let i=0; i<data.length; i++){ %>
+                    <tr>
+
+                        <% for(let j=0; j<head.length; j++){ %>
+                            <td>
+                                <%= data[i][head[j]] %>
+                            </td>
+
+                            <% } %>
+                    </tr>
+                    <% } %>
+
+
+
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+    <!-- Pagination -->
+    <nav id="pagingNav" aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="/show/filecsv/?file_id=<%= file._id %>&page=1">First</a></li>
+            <li class="page-item">
+                <%if(page!=1){%>
+                    <a class="page-link" href="/show/filecsv/?file_id=<%= file._id %>&page=<%=page-1%>">
+                        <%=page-1%>
+                    </a>
+                    <%}%>
+            </li>
+            <li class="page-item "><a class="page-link active-page">
+                    <%=page%>
+                </a></li>
+
+
+            <li class="page-item">
+                <%if(page!=totalPages){%>
+                    <a class="page-link" href="/show/filecsv/?file_id=<%= file._id %>&page=<%=++page%>">
+                        <%=page%>
+                    </a>
+                    <%}%>
+            </li>
+
+            <li class="page-item">
+
+                <a class="page-link" href="/show/filecsv/?file_id=<%= file._id %>&page=<%=totalPages%>">
+                    Last
+                </a>
+
+            </li>
+
+        </ul>
+    </nav>
+</div>
+<!-- External JavaScript -->
+
+<script src="/js/file.js"></script>
